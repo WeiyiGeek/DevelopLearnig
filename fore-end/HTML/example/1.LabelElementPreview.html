@@ -1,0 +1,20 @@
+<!-- 
+// Author: WeiyiGeek
+// Description: 实现在网页中实时预览html标签元素
+// Blog: weiyigeek.top
+-->
+<!-- 标签元素 -->
+<div class="result" style="border: 1px solid black;padding: 0px 10px 6px 10px;line-height: 1.2;">
+  <strong>实时结果输出：</strong>
+  <div class="output" style="min-height: 50px;">请点击执行,即可显示结果!</div>
+  <strong>可编辑代码:</strong>
+  <textarea class="htmlcode" class="input" style="min-height: 100px;width: 95%">&lt;h1&gt; WeiyiGeek Blog =&gt; &lt;p&gt; 花开堪折直须折，莫待无花空折枝。 &lt;/p&gt; &lt;/h1&gt;
+  </textarea>
+  <input class="reset" type="button" value="执行显示" onclick="output0.innerHTML= textarea0.value;">
+</div>
+
+<!-- JS脚本 -->
+<script>
+  const textarea0 = document.getElementsByClassName('htmlcode')[0];
+  const output0 = document.getElementsByClassName("output")[0];
+</script>

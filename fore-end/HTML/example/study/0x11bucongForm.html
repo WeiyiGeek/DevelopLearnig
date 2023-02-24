@@ -1,0 +1,49 @@
+<!DOCTYPE html>            <!--DOCTYPE 声明了文档类型-->
+<html>   <!--文本描述-->
+<head>     <!--头部-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />     <!--编码及网页类型-->
+<title>Title</title>   <!--标题-->
+<link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" />  <!--设置icon小图标-->
+<base href="http://www.runoob.com/try/demo_source/" target="_blank">
+</head>
+
+<body>  <!--主体-->
+<h1>datalist Demo</h1>
+<form>
+  <input list="browsers" name="browsers">
+  <datalist id="browsers">
+        <option value="IE">IE11</option>
+        <option value="Firefox">Firefox</opticon>
+        <option value="Chrome">chrome</option>
+        <option value="opera">opera</option>
+        <option value="safari">safari</option>
+  </optgroup>
+  </datalist>
+  <input type="submit" value="submit">
+</form>
+<hr />
+<h3>keygen Element 设置加密类型demo</h3>
+<form class="" action="demo_keygen.php" method="get">
+  用户名：<input type="text" name="usernane">
+  密码：<keygen name="security">
+        <button type="submit">提交加密</button>
+</form>
+<br />
+<form action="demo_keygen.php" method="get" id="secureformid">
+  Username: <input type="text" name="usr_name">
+  <input type="submit">
+</form>
+
+<p>下面的注册机领域在表单之外,但它仍属于该表单的一部分。</p>
+Encryption: <keygen name="security" form="secureformid">
+
+<p><strong>注意：</strong> IE 浏览器不支持 keygen 标签。</p>
+<hr />
+<h3> output 标签元素 </h3>
+<form oninput="x.value=parseInt(a.value)*parseInt(b.value)">
+  0<input type="range" id="a" value="50">100
+  +<input type="number" id="b" value="50">
+  =<output name="x" for="a b"></output>
+</form>
+</body>
+</html>

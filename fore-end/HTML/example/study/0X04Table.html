@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Basic Tag Demo</title>
+</head>
+
+<body>
+<h5>Tbale 标签</h5>
+<table border="1%">
+  <tr>
+      <th>班级</th>
+      <th>人数</th>
+  </tr>
+  <tr>
+      <td>一班</td>
+      <td>30</td>
+  </tr>
+</table>
+
+<p>每个表格由 table 标签开始。</p>
+<p>每个表格行由 tr 标签开始。</p>
+<p>每个表格数据由 td 标签开始。</p>
+
+<h4>一列：</h4>
+<table border="1">
+<tr>
+  <td>100</td>
+</tr>
+</table>
+
+<h4>一行三列：</h4>
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+</table>
+
+<h4>普通表头：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <th>电话</th>
+  <th>电话</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>垂直的表头：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th>电话</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <th>电话</th>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>本例演示一个带标题 (caption) 的表格</h4>
+
+<table border="1">
+  <caption>表格标题</caption>
+  <tr>
+    <th>这是表头</th>
+  </tr>
+  <tr>
+    <td>数据单元</td>
+  </tr>
+  <tr>
+     <td>数据单元</td>
+  </tr>
+  <tr>
+     <td>数据单元</td>
+  </tr>
+</table>
+
+<h4>横跨两列的单元格：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <th colspan="2">电话</th>   <!--colspan=2 代表了合并两列-->
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>横跨两行的单元格：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">电话</th> <!--rowspan=2 表示合并两行 -->
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>没有 cellpadding：</h4>
+<table border="1">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+<h4>带有 cellpadding：</h4>
+<table border="1" cellpadding="11">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+
+<h4>单元背景：</h4>
+<table border="1">
+<tr>
+  <td bgcolor="red">First</td>
+  <td>Row</td>
+</tr>
+<tr>
+  <td
+  background="/i/eg_bg_07.gif">
+  Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+<table border="1">
+
+<tr>
+  <td>
+   <p>这是一个段落。</p>
+   <p>这是另一个段落。</p>
+  </td>
+  <td>这个单元包含一个表格：
+
+      <table border="1">
+        <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>D</td>
+       </tr>
+      </table>
+
+  </td>
+</tr>
+
+<tr>
+  <td>这个单元包含一个列表：
+   <ul>
+    <li>苹果</li>
+    <li>香蕉</li>
+    <li>菠萝</li>
+   </ul>
+  </td>
+  <td>HELLO</td>
+</tr>
+</table>
+
+
+<p><b>注释：</b>frame 属性无法在 Internet Explorer 中正确地显示。</p>
+
+<p>Table with frame="box":</p>
+<table frame="box">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="above":</p>
+<table frame="above">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="below":</p>
+<table frame="below">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="hsides":</p>
+<table frame="hsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="vsides":</p>
+<table frame="vsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<hr />
+<table width="100%" border="1">
+
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+  <tr>
+    <td>2489604</td>
+    <td>My first CSS</td>
+    <td>$47</td>
+  </tr>
+</table>
+
+<hr />
+<table width="20" summary="TEST tables">
+<tr>
+<th>表头</th>
+</tr>
+
+<tr>
+<td>数据单元</td>
+</tr>
+
+</table>
+
+</body>
+<html>

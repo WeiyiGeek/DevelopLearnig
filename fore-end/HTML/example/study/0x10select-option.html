@@ -1,0 +1,88 @@
+<!DOCTYPE html>            <!--DOCTYPE 声明了文档类型-->
+<html>   <!--文本描述-->
+<head>     <!--头部-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />     <!--编码及网页类型-->
+<title>Title</title>   <!--标题-->
+<link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" />  <!--设置icon小图标-->
+</head>
+
+<body>  <!--主体-->
+<h3>简单的下拉列表</h3>
+<form action="service.php" method="get" id="idform1">
+<select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+</select>
+</form>
+<br /><br /><br /><br />
+<!--form来引入表单标签以外的提交文本,-->
+<p>下面是设置显示多个选项和必须填写，多选,并且用form来绑定提交的form表单</p>
+<select name="carlist" form="idform1" size="4" required multiple>
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+   <option value="opel">Opel</option>
+   <option value="audi">Audi</option>
+</select>
+<br />
+<p>下面是设置disabled,不启用</p>
+<select name="carlist" form="idform1" size="4" disabled>
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+   <option value="opel">Opel</option>
+   <option value="audi">Audi</option>
+</select>
+<hr />
+<p>option Attribute Demo：设置默认选择的,而且第二项无法选择</p>
+<form>
+<select name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab" disabled>Saab</option>
+  <option value="fiat" selected="selected">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+</form>
+
+<hr>
+<h3>optgroup 标签Demo</h3>
+<form class="" action="index.html" method="post">
+  <select class="" name="">
+    <optgroup label="OPT1">
+        <option value="volo">Volvo</option>
+        <option value="dssn">dssn</option>
+    </optgroup>
+    <optgroup label="OPT2">
+        <option value="xiandai">xiandai</option>
+        <option value="bentian">bentian</option>
+    </optgroup>
+  </select>
+</form>
+
+<br>
+<br><br><br><br><br>
+<hr />
+<h4>label标签的for属性绑定input表单</h4>
+ <form action="index.html" method="post">
+   <label for="male" form="idform1">Male</label>
+   <input type="radio" name="sex" value="male" id="male"><br />
+   <label for="female">Female</label>
+   <input type="radio" name="sex" value="female" id="female"><br/>
+   <input type="submit" value="submit">
+ </form>
+
+<hr />
+<h3>fieldset 元素demo：</h3>
+<form class="" action="index.html" method="post">
+  <fieldset>
+    <legend>Personal information</legend>
+    Name:<input type="text" name="name" size="30"><br>
+    E-mail:<input type="text" name="email" size="30"><br>
+    Date of birth:<input type="text" size="10"><br>
+    <input type="submit" value="submit">
+  </fieldset>
+</form>
+
+<hr/>
+</body>
+</html>

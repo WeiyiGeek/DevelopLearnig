@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>Id 属性的demo</title> 
+<!--js来获取元素的id从而确定要修改标签-->
+<script>
+function displayResult()
+{
+	document.getElementById("myHeader").innerHTML="Test Id call";
+}
+</script>
+
+
+</head>
+
+<body>
+
+<h1 id="myHeader">Hello World!</h1>
+<!--下面利用了事件和调用了一个js函数-->
+<button onclick="displayResult()">编辑文本</button>
+<p>下面利用引用id属性名来达到修改文字的样式效果！！！</p>
+<h1 id="myHeader1">Hello World!</h1>
+<br />
+<p>下面是测试dir的属性</p>
+<pre dir="ltr">123456789</pre>
+<p dir="rtl">!!123456789</p>
+<!--必须加上!、@才能分割字符，将符号后的字符放在前面+符号前面的符号-->
+<p dir="rtl">1234!56789</p>
+<bdo dir="rtl">123456789</bdo>
+<p><abbr title="世界卫生组织">WHO</abbr> 成立于 1948 年</p>
+<p title="title属性设置效果">title属性</p>
+<hr />
+<p>这不是一段隐藏的段落</p>
+<p hidden>这不是一段隐藏的段落</p>
+<span hidden="hidden">这不是一段隐藏的段落</span>
+
+
+
+
+</body>
+</html>

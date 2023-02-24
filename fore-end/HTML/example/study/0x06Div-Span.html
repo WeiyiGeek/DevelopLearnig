@@ -1,0 +1,62 @@
+<!DOCTYPE html>            <!--DOCTYPE 声明了文档类型-->
+<html>   <!--文本描述-->
+<head>     <!--头部-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />     <!--编码及网页类型-->
+<title>Title</title>   <!--标题-->
+<link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" />  <!--设置icon小图标-->
+ <!--必须设置type属性-->
+<style type="text/css"> 
+#testdiv{
+	color:#00ff00;
+	background-color:black;
+}
+.news{
+	color:green;
+	border-color:#000;
+	border-width:1px;
+	border-style:solid;
+}
+p.tip span{
+    font-weight:bold;
+    color:#ff9955;
+}
+</style>
+</head>
+
+<body>  <!--主体-->
+<h1>我的第一个标题1</h1>
+<p>我的第一个段落1</p>
+文档的内容
+
+<hr />
+<h1> Div 区块元素 </h1>
+
+<h6>这里不包含在区块Element里面</h6>
+<p>这里也不包含在区块Element里面</p>
+
+<div id="testdiv" >
+	<h6>包含在Div区块Element里面</h6>
+	<p>包含在Div区块Element里面</p>
+</div>
+<h1> 设置 Div 区块元素的边框 </h1>
+
+ <div class="news">
+  <h2>News headline 1</h2>
+  <p>some text. some text. some text...</p>
+  ...
+ </div>
+
+ <div class="news">
+  <h2>News headline 2</h2>
+  <p>some text. some text. some text...</p>
+  ...
+ </div>
+ 
+<hr />
+
+<h1> span 内联元素 </h1>
+<p class="tip"><span>提示：</span>XXXXXXXXXXXXXXXX</p>
+
+
+</body>
+</html>

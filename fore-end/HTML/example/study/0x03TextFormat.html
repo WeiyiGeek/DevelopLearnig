@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Basic Tag Demo</title>
+</head>
+
+<body>
+<h1 style="text-align:Center;color:red;">文本格式化标签</h1>
+<b style="color:yellow">粗体文字</b>
+<big style="color:blue">大号字</big>
+<em style="color:black">着中文字</em>
+<br />
+<i>斜体</i>
+<small>定义小号字</small>
+<strong>加重语气<strong>
+<br />
+<sub>定义下标</sub>
+<sup>定义上标字</sup>
+<ins>插入字</ins>
+<del>删除线字</del>
+<br />
+<s>不赞成使用，使用 del 代替</s>
+<strike>不赞成使用，使用 del 代替</strike>
+<br/>
+<u>下划线,不赞成使用，使用样式（style）代替</u>
+<hr />
+<br />
+<hr />
+<h1 style="color:caqua;"> ## “计算机输出”标签</h1>
+<p>
+<b>注释：</b>这些标签常用于显示计算机/编程代码。
+</p>
+<code>
+#include <stdio.h>
+int main(){
+  printf("Hello Code Tag!!!!");
+  return 0;
+}
+</code>
+<br />
+<kbd style="color:fuchsia;">Keyboard input F1,键盘键码</kbd>
+<br />
+<samp style="color:green;">Sample text,计算机代码样本</samp>
+<br />
+<tt style="color:lime;">Teletype text，打印机代码</tt>
+<br />
+<var style="color:maroon">Computer variable，定义变量</var>
+<br />
+<pre style="color:olive">标签很适合显示计算机代码：
+#include <stdio.h>
+int main(){
+    printf("Hello Code Tag!!!!");
+    return 0;
+}
+</pre>
+<listing>不赞成使用,使用 pre代替
+  for i = 1 to 10
+       print i
+  next i
+</listing>
+<xmp>不赞成使用,使用 pre代替
+  这是预格式文本。
+  它保留了      空格和换行。
+</xmp>
+<!-- <plaintext>不赞成使用,使用 pre 代替</plaintext> -->
+
+<hr />
+<h1>引用、引用和术语定义</h1>
+<p style="color:Purple">此例演示如何在 HTML 文件中写地址</p>
+<address>
+  请发Email给我,<a href="mailto:test@qq.com?cc=test1@qq.com&bbc=www@tss.com&subject=Testmail&body=Test%20SendMAIL">Check mail</a><br />
+开水<br/>
+涪区<br />
+重市<br />
+</address>
+<br />
+<span>定义缩写,鼠标移动到上面的时候进行显示abbreviation,title 可用于展示表达的完整版本,仅对于 IE 5 中的 acronym 元素有效。
+对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。
+</span>
+<br>
+<abbr title="etcetera">etc.</abbr>
+<abbr title="abbreviation">abbr.</abbr>
+<acronym title="World Wide Web">定义首字母缩写,WWW</acronym>
+<br /><br /><br /><br />
+<p>如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (默认属性ltr,倒叙rtl)；</p>
+<bdo dir="rtl">
+Here is some Hebrew text
+</bdo>
+<br />
+这是一个长引用:
+<blockquote>这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。 </blockquote>
+
+这是一个短引用：
+<q>短短的引用，short Reference！！</q>
+
+<p>
+使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+</p>
+<cite title="sssss"> 	定义引用、引证。 </cite>
+<dfn title="sss"> 	定义一个定义项目。</dfn>
+<hr />
+<blockquote>
+Here is a long quotation here is a long quotation here is a long quotation 
+here is a long quotation here is a long quotation here is a long quotation 
+here is a long quotation here is a long quotation here is a long quotation.
+</blockquote>
+</body>
+</html>

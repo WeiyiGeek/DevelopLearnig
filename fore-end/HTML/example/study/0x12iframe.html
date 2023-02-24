@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>   <!--文本描述-->
+<head>     <!--头部-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />     <!--编码及网页类型-->
+<title>Title</title>   <!--标题-->
+<link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" />  <!--设置icon小图标-->
+</head>
+
+<body>  <!--主体-->
+<h6>Iframe - 设置高度与宽度</h6>
+<iframe src="http://www.baidu.com/index.html" width="500" height="300"></iframe>
+
+<h6>Iframe - 移除边框与关闭滚动条</h6>
+<iframe src="http://www.baidu.com/index.html"  width="500" height="300" frameborder="0" scrolling="no"> <p>您的浏览器不支持  iframe 标签</p>
+</iframe>
+
+<h6>使用iframe来显示目标链接页面</h6>
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.runoob.com" target="iframe_a">RUNOOB.COM</a></p>
+
+<p><b>注意：</b> 因为 a 标签的 target 属性是名为 iframe_a 的 iframe 框架，所以在点击链接时页面会显示在 iframe框架中。</p>
+<br />
+
+<h4>sandbox属性</h4>
+<iframe src="demo_iframe_sandbox_form.html" sandbox="">
+  <p>您的浏览器不支持 iframes.</p>
+</iframe>
+
+<p>"提交" 按钮将提交行内框架内的表单。</p>
+<p>由于 sandbox 属性被设置为空字符串 ("")，将屏蔽对行内框架中表单的提交。</p>
+<p>如果向 sandbox 属性添加 "allow-forms"，则允许表单提交。</p>
+<p>如果向 sandbox 属性添加 "allow-scripts"，则允许运行 JavaScript。</p>
+<p><b>注释：</b>IE 9 以及更早的版本不支持 sandbox 属性，Opera 12 以及更早的版本也不支持该属性。</p>
+
+</body>
+</html>

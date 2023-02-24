@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>form 表单demo</title>
+</head>
+<body>
+
+<h4>Textarea Demo</h4>
+<form method="get" action="service.php">
+  <label for="username">First name: </label><input type="text" name="firstname"><br>
+  <br />
+  <label for="username">Last name: </label><input type="text" name="lastname"><br>
+</form>
+
+<form action="form_action.asp" method="get">
+  <p>First name: <input type="text" name="fname" /></p>
+  <p>Last name: <input type="text" name="lname" /></p>
+  <input type="submit" value="Submit" />
+</form>
+<br/>
+
+<hr />
+<h4>密码字段</h4>
+<form action="service.php" method="get">
+<p>username:<input type="text" name="username" placeholder="请输入用户名" /></p>
+<p>password:<input type="password" name="password" placeholder="请输入用户密码" /></p>
+<input type="submit" value="确定" name="submit" />
+<input type="reset" value="重置" name="reset" />
+</form>
+
+<hr />
+<h4>文本域 Textares</h4>
+<form action="service.php" method="get">
+  <p>个人介绍:</p>
+  <textarea placeholder="请输入你的个人简介,而且是必须填写得" cols="20" rows="2" required>我是一位爱好网络计算机的学生</textarea><br />
+  <p>禁用文本框:</p>
+  <textarea placeholder="请输入你的个人简介,而且是必须填写得" cols="20" rows="2" disabled>我是一位爱好网络计算机的学生</textarea><br />
+  <p>单位介绍:</p>
+  <textarea placeholder="W3c.shool 公司 , 你不能修改" cols="20" rows="3" readonly autofocus ></textarea><br />
+  <input type="submit" value="提交" name="submit" />
+  <input type="reset" value="重置" name="reset" />
+</form>
+
+<hr />
+<h4>这是一个单选按钮 Radio Buttons</h4>
+<form action="service.php" method="post">
+  <input type="radio" name="sex" value="male">Male|男<br/>
+  <input type="radio" name="sex" value="female">Female|女<br/>
+</form>
+<hr />
+<h4>这是一个复选框 checkboxes</h4>
+<form action="service.php" method="get">
+  <input type="checkbox" name="vehicle" value="bike">I have a bike<br/>
+  <input type="checkbox" name="vehicle" value="car">I have a Car<br />
+  <input type="checkbox" name="vehicle" value="fly">I have a Fiy<br />
+  <input type="submit" value="提交" name="ok">
+</form>
+
+<hr />
+<h4>按钮 Demo</h4>
+<form name="input" action="http://www.runoob.com/try/demo_source/html_form_action.php" method="get">
+Username: <input type="text" name="user">
+<input type="submit" value="Submit">
+</form>
+
+<hr />
+<h4><button type="button" name="button">button</button>按钮 Demo</h4>
+<button type="button" onclick="alert('你好，世界!')">点我!</button>
+<br />
+<form action="demo-form.php" method="get">
+First name: <input type="text" name="fname" /><br>
+Last name: <input type="text" name="lname" /><br>
+<button type="submit">提交</button><br>
+<button type="submit" formaction="demo-admin.php">提交</button>
+</form>
+
+<p><strong>注意：</strong> Internet Explorer 9 及更早 IE 版本不支持 formaction 属性。</p>
+
+<hr>
+<h4>利用form 发送邮件到 someone@example.com</h4>
+<form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name" placeholder="your name"><br>
+E-mail:<br>
+<input type="text" name="mail" placeholder="your email"><br>
+Comment:<br>
+<input type="text" name="comment" placeholder="your comment" size="50"><br><br>
+<input type="submit" value="发送">
+<input type="reset" value="重置">
+</form>
+
+
+</body>
+</html>
