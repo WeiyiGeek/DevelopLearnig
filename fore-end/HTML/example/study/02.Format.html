@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />      <!--编码及网页类型-->
+  <meta name="author" content="WeiyiGeek" />   <!-- 自定义元数据 -->
+  <title>HTML格式化输出标签元素实践</title>
+</head>
+<body>
+<h1 style="text-align:Center;color:red;">文本格式化标签示例</h1>
+<h1 style="color:caqua;"> ## “常规格式输出”标签</h1>
+<p>这是一个普通的文本- <small style="color:chartreuse">呈现小号字体效果</small></p> 
+<p>这是一个普通的文本- <b style="color:cadetblue">这是一个加粗文本</b></p> 
+<p>这是一个普通的文本- <i style="color:aquamarine">这是一个斜体文本效果</i></p> 
+<p>这是一个普通的文本- <em style="color:black">定义语气为强调的内容</em></p> 
+<p>这是一个普通的文本- <strong style="color:brown">定义语气更为强烈的强调文本</strong></p> 
+<p>这是一个普通的文本- 这段文本包含上标: x<sup>2</sup>+y<sup>2</sup>=8</p> 
+<p>这是一个普通的文本- 这段文本包含下标: H<sub>2</sub>O</p> 
+<p>这是一个普通的文本- 下划线显示作者主页站点：<u style="text-decoration: #f0a wavy underline;">https://weiyigeek.top</u></p> 
+<p>这是一个普通的文本- 从文档中删除作者博客站点文字内容：<del style="color:#a4d">https://blog.weiyigeek.top</del></p> 
+<p>这是一个普通的文本- 从文档中添加(插入)作者作者博客站点：<del style="color:rgb(14, 108, 104)">https://blog.weiyigeek.top</del></p> 
+<p>这是一个普通的文本- <s>s 标签不赞成使用，使用 del 代替</s></p>
+<p>这是一个普通的文本- <strike>strike 标签->不赞成使用，使用 del 代替</strike></p>
+<br>
+<hr />
+<h1 style="color:caqua;"> ## “计算机输出”标签</h1>
+<p><b>注释：</b>这些标签常用于显示计算机/编程代码。</p>
+<var style="color:maroon">Computer variable，定义变量</var>
+<p>一个简单的 var 标签示例 方程式-> <var>x</var> = <var>y</var> + 2</p>
+<p>一个简单的 kbd 标签示例 请键入-> <kbd style="color:fuchsia;">Ctrl</kbd>+<kbd>F1</kbd></p>
+<p>一个简单的 samp 标签示例 -> <samp style="color:green;">Sample text,计算机代码样本</samp></p>
+<p>一个简单的 tt 标签示例 -> <tt style="color:lime;">Teletype text,打印机代码</tt></p>
+<pre style="color:greenyellow;background-color: black;">标签很适合显示计算机代码：
+#include <stdio.h>
+int main(){
+  printf("Hello Code Tag!!!!");
+  return 0;
+}
+</pre>
+
+<code style="color:white;background-color: black;">
+#include <stdio.h>
+int main(){
+  printf("Hello Code Tag!!!!");
+  return 0;
+}
+</code>
+<br/>
+
+<listing  style="color:#f0a;background-color: black;" >listing 标签，不赞成使用,使用 pre代替
+  for i = 1 to 10
+       print i
+  next i
+</listing>
+<xmp  style="color:cornflowerblue;background-color: black;">xmp 标签，不赞成使用,使用 pre代替
+  这是预格式文本。
+  它保留了      空格和换行。
+</xmp>
+
+<!-- <plaintext style="color:cornflowerblue;background-color: black;"> plaintext 标签，不赞成使用,使用 pre 代替
+</plaintext>  -->
+
+
+<hr />
+
+<h1 >## “引用、引用和术语定义”标签</h1>
+
+<!-- 1.abbr 元素使用 -->
+1.abbr 元素使用
+<p> You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language). 
+The <abbr title="People's Republic of China">PRC</abbr> was founded in 1949
+<br>
+<br>
+
+<!-- 2.address 元素使用 -->
+2.address 元素使用
+<style>
+  a[href^='mailto']::before {
+     content: '📧 ';
+  }
+  a[href^='tel']::before {
+     content: '📞 ';
+  }
+  </style>
+  <address>
+    学府大道 <br />
+    南岸区 <br />
+    重庆市 <br />
+    中国   <br />
+    <a href="mailto:master@weiyigeek.top">master@weiyigeek.top</a><br>
+    <a href="tel:+13188888888">13188888888</a><br>
+  </address>
+<br> 
+
+<!-- 3.bdo 元素使用 -->
+3.bdo 元素使用 <br>
+<bdo dir="ltr">
+  Here is some Hebrew text
+</bdo> <br>
+<bdo dir="rtl">
+  Here is some Hebrew text
+</bdo>
+<br>
+<br> 
+
+<!-- 4.q 元素使用 -->
+4.q 元素使用
+这是一个短引用：
+<q>短短的引用，short Reference！！</q>
+<p>WeiyiGeek 的个人主页域名地址：
+  <q cite="https://weiyigeek.top">域名 weiyigeek.top </q>.
+</p>
+<br />
+
+<!-- 5.blockquote 元素使用 -->
+5.blockquote 元素使用
+这是一个长引用:
+<blockquote>这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。 </blockquote>
+<p>
+使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+</p>
+<blockquote cite="https://blog.weiyigeek.top">
+  Here is a long quotation here is a long quotation here is a long quotation 
+  here is a long quotation here is a long quotation here is a long quotation 
+  here is a long quotation here is a long quotation here is a long quotation.
+</blockquote>
+<br />
+
+<!-- 6.cite 元素使用 -->
+6.cite 元素使用 <br>
+<a href="http://www.baidu.com">定义引用、引证于<cite title="百度百科">百度百科 </cite></a>
+
+<br />
+<!-- 7.dfn 元素使用 -->
+7.dfn 元素使用 <br>
+<dl>
+  <!-- Define "World-Wide Web" and reference definition for "the Internet" -->
+  <dt>
+    <dfn>
+      <abbr title="World-Wide Web">WWW</abbr>
+    </dfn>
+  </dt>
+  <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a href="#def-internet">the Internet</a>.</dd>
+</dl>
+
+<hr />
+
+<h1 >## HTML5 格式化 “新增” 标签</h1>
+
+<p>示例1. bdi 标签</p>
+<p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed left-to-right.</p>
+<p dir="rtl">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
+<ul>
+  <li><bdi style="color: red;"  dir="ltr">WeiyiGeek</bdi>: 1st place</li>
+  <li><span style="color: blue;" dir="rtl">Geeker</span>: 2nd place</li>
+</ul>
+<p>示例2. mark 标签</p>
+<p>我说一段文字，我是一个关键点<mark>Key 高亮文本 </mark></p>
+<p>示例3. meter 标签</p>
+<p> Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.</p>
+<p>当值为 90 ： He got a <meter low="60" high="80" max="100" value="90">A</meter> on the exam. </p>
+<p>当值为 80 ： He got a <meter low="60" high="80" max="100" value="80">B</meter> on the exam. </p>
+<p>当值为 59 ： He got a <meter low="60" high="80" max="100" value="59">B</meter> on the exam. </p>
+<p>当值为 91 : <meter low="60" optimum="90" high="80" max="100" value="91">A</meter></p>
+<p>示例4. progress 标签</p>
+<label for="file">File progress:</label>
+<progress id="file" max="100" value="70"> 70% </progress>
+<p>示例 5. ruby、rp、rt 标签</p>
+<ruby>
+  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+</ruby>
+<!-- 示例 2: 词 -->
+<ruby>
+  明 日 <rp>(</rp><rt>ming ri</rt><rp>)</rp>
+</ruby>
+<p>示例 6. wbr 标签</p>
+<p>此处正在测试wbr标签: <wbr> 一段很长的文字，文章!</wbr> 以便避免将标点符号留在行尾.</p>
+<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+<p>示例 7. time 标签</p>
+<!-- pubdate 示例 -->
+<article><p>This article was created on <time pubdate>2011-01-28</time>.</p>
+<!-- datetime 示例 -->
+</article><p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+</body>
+</html>

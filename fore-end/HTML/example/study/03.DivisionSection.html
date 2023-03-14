@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML样式布局区块标签元素实践</title>
+  <style>
+  /* shadowbox 类名称 */
+  .shadowbox {
+    width: 15em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 8px 12px;
+    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  }
+  /* p标签 tip 类名称，以及sapn标签 */
+  p.tip,span {
+    font-weight:bold;
+    color:#ff9955;
+  }
+  a[href^='mailto']::before {
+        content: '📧 ';
+    }
+  a[href^='tel']::before {
+      content: '📞 ';
+  }
+</style>
+</head>
+<body>
+<b>1.div 标签示例</b>
+<div id="demo" class="shadowbox" style="color: brown;background-color:bisque;border-color:#0f5;border-width:1px;border-style:solid;">
+  <h1>我是DIV标签中的h1标签元素标题</h1>
+  <b>我是DIV标签中的p标签元素文本</b><br/>
+  <img src="https://blog.weiyigeek.top/img/avatar.jpg" alt="WeiyiGeek 头像">
+</div>
+<br/>
+<b>2.span 标签示例</b>
+<p class="tip"><span style="font-weight:bold;background-color: #444;">温馨提示：</span>欢迎访问 WeiyiGeek 博主网站!</b><br/><br/>
+<b style="color: #333;">3.article、section、header、aside、footer 标签示例</b>
+<article>
+  <header style="border:solid 1px  #444;">文章标题</header>
+  <section style="border:solid 1px  #555;float: left;width: 200px;height: 100%;">
+    <p><a href="#">文章章节1</a></p>
+    <p><a href="#">文章章节2</a></p>
+    <p><a href="#">文章章节3</a></p>
+  </section>
+  <div class="page_content" style="border:solid 1px #555;margin-left: 200px;">文章内容</div>
+  <footer style="border:solid 1px  #333;margin-left: 200px;">
+    <span>author：WeiyiGeek</span>
+    <p>Posted on <time datetime="2022-05-16 19:00">May 16</time>by weiyigeek. </p>
+    <address>
+    <a href="mailto:master@weiyigeek.top">master@weiyigeek.top</a>
+    <a href="tel:+18888888888">(86) 18888888888</a>
+    </address>
+  </footer>
+</article>
+<br><br><hr>
+<b style="color: #333;">4.nav 标签示例</b>
+<style>
+nav {
+  border-bottom: 1px solid black;
+}
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+  border-radius: 2px;
+  border-style: ridge;
+}
+</style>
+<aside style="border:solid 1px black;">
+  <p>我是全栈的侧边导航栏</p>
+  <nav class="crumbs">
+    <ol style=" list-style-type: none;">
+      <li class="crumb"><a href="#">Home</a></li>
+      <li class="crumb"><a href="#">Article</a></li>
+      <li class="crumb">HTML 学习指南</li>
+    </ol>
+  </nav>
+</aside>
+
+<b style="color: #333;">5.details / summary标签示例</b>
+<style>
+  details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+  }
+  
+  summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+  }
+  
+  details[open] {
+    padding: 0.5em;
+  }
+  details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+  }
+</style>
+<details>
+  <summary>博主联系方式</summary>
+  微信号: Weiyigeeker <br/>
+  博客地址: weiyigeek.top <br/>
+  公众号地址: 极客全栈修炼指南 <br/>
+  邮箱地址: master@weiyigeek.top <br/>
+</details>
+<br>
+<b style="color: #333;">6.dialog标签示例</b><br/>
+<dialog open>
+  <p>大家好！你们喜欢本博客（https://weiyigeek.top）网站吗？  </p>
+  <form method="dialog">
+    <button value="Yes">Yes</button>
+    <button value="No">No</button>
+  </form>
+</dialog>
+</body>
+</html>
+
+
+

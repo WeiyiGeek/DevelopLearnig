@@ -2,31 +2,88 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Basic Tag Demo</title>
-</head>
+<title>表格与列表标签示例</title>
+<style>
+table { 
+  margin-left: auto; 
+  margin-right: auto;
+  border: 1px solid black; 
+  line-height: 1.25;
+  width: 100%;
+  text-align: center; 
+  border-spacing: 0px 1px; 
+  border-collapse: collapse;
+  table-layout:fixed;
+}
 
+/* table th { 
+  border: 1px solid black;
+  line-height: 1;
+  padding: 7px;
+  background-color: #dddddd;
+  text-align:center;
+}
+*/
+table td { 
+  border: 1px solid black; 
+  padding: 5px;
+  text-align:left;
+} 
+</style>
+</head>
 <body>
-<h5>Tbale 标签</h5>
-<table border="1%">
+<!-- 示例1.常规表格示例 -->
+<table border="1">
+  <caption style="font-weight: bolder;">常规表格示例</caption>
   <tr>
-      <th>班级</th>
-      <th>人数</th>
+    <th>班级</th>
+    <th>人数</th>
+    <th>优生率</th>
   </tr>
   <tr>
-      <td>一班</td>
-      <td>30</td>
+    <td>一班</td>
+    <td>30</td>
+    <td>90%</td>
+  </tr>
+  <tr>
+    <td>二班</td>
+    <td>50</td>
+    <td>80%</td>
   </tr>
 </table>
-
 <p>每个表格由 table 标签开始。</p>
 <p>每个表格行由 tr 标签开始。</p>
+<p>每个表格头由 th 标签指定。</p>
 <p>每个表格数据由 td 标签开始。</p>
+<table>
+  <caption>Color names and values</caption>
+  <tbody>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">HEX</th>
+      <th scope="col">HSLa</th>
+      <th scope="col">RGBa</th>
+    </tr>
+    <tr>
+      <th scope="row">Teal</th>
+      <td><code>#51F6F6</code></td>
+      <td><code>hsla(180, 90%, 64%, 1)</code></td>
+      <td><code>rgba(81, 246, 246, 1)</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Goldenrod</th>
+      <td><code>#F6BC57</code></td>
+      <td><code>hsla(38, 90%, 65%, 1)</code></td>
+      <td><code>rgba(246, 188, 87, 1)</code></td>
+    </tr>
+  </tbody>
+</table>
 
+<hr>
+<p> tr / td / th 标签细讲</p>
 <h4>一列：</h4>
 <table border="1">
-<tr>
-  <td>100</td>
-</tr>
+<tr><td>100</td></tr>
 </table>
 
 <h4>一行三列：</h4>
@@ -55,16 +112,13 @@
 <h4>垂直的表头：</h4>
 <table border="1">
 <tr>
-  <th>姓名</th>
-  <td>Bill Gates</td>
+  <th>姓名</th><td>Bill Gates</td>
 </tr>
 <tr>
-  <th>电话</th>
-  <td>555 77 854</td>
+  <th>电话</th><td>555 77 854</td>
 </tr>
 <tr>
-  <th>电话</th>
-  <td>555 77 855</td>
+  <th>电话</th><td>555 77 855</td>
 </tr>
 </table>
 
@@ -86,33 +140,7 @@
   </tr>
 </table>
 
-<h4>横跨两列的单元格：</h4>
-<table border="1">
-<tr>
-  <th>姓名</th>
-  <th colspan="2">电话</th>   <!--colspan=2 代表了合并两列-->
-</tr>
-<tr>
-  <td>Bill Gates</td>
-  <td>555 77 854</td>
-  <td>555 77 855</td>
-</tr>
-</table>
 
-<h4>横跨两行的单元格：</h4>
-<table border="1">
-<tr>
-  <th>姓名</th>
-  <td>Bill Gates</td>
-</tr>
-<tr>
-  <th rowspan="2">电话</th> <!--rowspan=2 表示合并两行 -->
-  <td>555 77 854</td>
-</tr>
-<tr>
-  <td>555 77 855</td>
-</tr>
-</table>
 
 <h4>没有 cellpadding：</h4>
 <table border="1">
@@ -137,7 +165,6 @@
   <td>Row</td>
 </tr>
 </table>
-
 
 <h4>单元背景：</h4>
 <table border="1">
@@ -271,17 +298,76 @@
   </tr>
 </table>
 
-<hr />
-<table width="20" summary="TEST tables">
-<tr>
-<th>表头</th>
-</tr>
+<br>
+<p>colgroup 与 col 示例</p>
+<style>
+.build {
+  background-color: #d7d9f2;
+}
 
-<tr>
-<td>数据单元</td>
-</tr>
-
+.explain {
+  background-color: #ffe8d4;
+}
+td {
+  text-align: center;
+}
+</style>
+<table>
+  <caption>编程开发语言</caption>
+  <colgroup>
+      <col>
+      <col span="2" class="build">
+      <col span="2" class="explain">
+  </colgroup>
+  <tr>
+      <td> </td>
+      <th scope="col">C</th>
+      <th scope="col">C++</th>
+      <th scope="col">Python</th>
+      <th scope="col">JavaScript</th>
+  </tr>
+  <tr>
+      <th scope="row">Skill</th>
+      <td>Smarts</td>
+      <td>Dex, acrobat</td>
+      <td>Super speed</td>
+      <td>Super speed</td>
+  </tr>
 </table>
+<br/>
+<table>
+  <caption>表格标题</caption>
+  <!-- 头 -->
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <!-- 尾部 -->
+  <tfoot>
+    <tr>
+      <td scope="row">文具；信纸；信笺</td>
+      <td>支出；开支；</td>
+    </tr>
+    <tr>
+      <td scope="row">文具；信纸；信笺</td>
+      <td>支出；开支；</td>
+    </tr>
+  </tfoot>
+  <!-- 主体 -->
+  <tbody>
+      <tr>
+        <th scope="row">Donuts</th>
+        <td>3,000</td>
+      </tr>
+      <tr>
+        <th scope="row">Stationery</th>
+        <td>18,000</td>
+      </tr>
+  </tbody>
+</table>
+
 
 </body>
 <html>
