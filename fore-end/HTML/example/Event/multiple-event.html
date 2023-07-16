@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>综合示例</title>
+</head>
+<body>
+  <h5>1.oncopy / oncut / onpaste 事件演示:</h5>
+  <div oncopy="log('复制被阻止'); return false;"> 请尝试着复制这句话，到介绍！</div>
+  <br>
+  <label for="t1">
+    介绍: <br>
+    <textarea name="t1" id="t1" cols="30" rows="3" oncopy="log('复制成功!');" oncut="log('剪切被阻止!'); return false;" onpaste="logPause('粘贴被阻止!');return false;"> 尝试剪切和复制该文本域内的文本! 以及粘贴到此处。 </textarea>
+  </label>
+  <br>
+  <label for="t2">
+    结果:<br>
+    <textarea name="t2" id="t2" cols="30" rows="3"></textarea>
+  </label>
+  <script>
+  function log(txt){
+    document.getElementById("t2").appendChild(document.createTextNode(txt + "\n"));
+  }
+  function logPause(txt) {
+    document.getElementById("t2").appendChild(document.createTextNode(txt + "\n"));
+  }
+  </script>
+
+  <h5>2.oninput 事件演示:</h5>
+  <input placeholder="Enter some text" name="name" oninput="logInput(this)"/>
+  <p id="values"></p>
+  <script>
+    function logInput(obj) {
+      document.getElementById("values").textContent = obj.value;
+    }
+  </script>
+
+  <h5>3.Drag and drop example</h5>
+  <div class="dropzone">
+    <div id="draggable" draggable="true">This div is draggable</div>
+  </div>
+  <div class="dropzone" id="droptarget"></div>
+  <style>
+    body {
+      /* Prevent the user selecting text in the example */
+      user-select: none;
+    }
+
+    #draggable {
+      text-align: center;
+      background: white;
+    }
+
+    .dropzone {
+      width: 200px;
+      height: 20px;
+      background: blue;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .dropzone.dragover {
+      background-color: purple;
+    }
+
+    .dragging {
+      opacity: .5;
+    }
+  </style>
+  <script>
+    let dragged;
+    /* events fired on the draggable target */
+    const source = document.getElementById("draggable");
+    source.addEventListener("drag", (event) => {
+      console.log("1.dragging");
+    });
+
+    source.addEventListener("dragstart", (event) => {
+      console.log("2.dragstart");
+      // store a ref. on the dragged elem
+      dragged = event.target;
+      // make it half transparent
+      event.target.classList.add("dragging");
+    });
+
+    source.addEventListener("dragend", (event) => {
+      console.log("3.dragend");
+      // reset the transparency
+      event.target.classList.remove("dragging");
+    });
+
+    /* events fired on the drop targets */
+    const target = document.getElementById("droptarget");
+    target.addEventListener("dragover", (event) => {
+      console.log("4.dragover");
+      // prevent default to allow drop
+      event.preventDefault();
+    }, false);
+
+    target.addEventListener("dragenter", (event) => {
+      console.log("5.dragenter");
+      // highlight potential drop target when the draggable element enters it
+      if (event.target.classList.contains("dropzone")) {
+        event.target.classList.add("dragover");
+      }
+    });
+
+    target.addEventListener("dragleave", (event) => {
+      console.log("6.dragleave");
+      // reset background of potential drop target when the draggable element leaves it
+      if (event.target.classList.contains("dropzone")) {
+        event.target.classList.remove("dragover");
+      }
+    });
+
+    target.addEventListener("drop", (event) => {
+      console.log("7.drop");
+      // prevent default action (open as link for some elements)
+      event.preventDefault();
+      // move dragged element to the selected drop target
+      if (event.target.classList.contains("dropzone")) {
+        event.target.classList.remove("dragover");
+        dragged.parentNode.removeChild(dragged);
+        event.target.appendChild(dragged);
+      }
+    });
+  </script>
+</body>
+</html>

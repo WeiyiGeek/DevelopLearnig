@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>针对 HTML 表单内的动作触发的事件，此处在 form 元素中展示</title>
+  <script>
+    //   <!-- 禁用网页值得学习和注意 -->
+    document.oncontextmenu = function(e) {
+      console.log("网页文档无法使用右键菜单!")
+      return false;
+    }
+  </script>
+</head>
+<body oncontextmenu="alert('禁用body元素包含中右键菜单，你是打不开的!');return false" style="border: 0;padding: 0;">
+  <form action="#" method="get" onsubmit="checkForm()">
+    <label for="username">账 号 <input type="text" name="username" id="username" placeholder="登录账号" onfocus="setInputBorderStyle(this.id)" onblur="resetInputBorderStyle(this.id)" onselect="copyUserName(this.id)" onchange="checkField(this.value)"></label>
+    <label for="password">密 码 <input type="password" name="password" id="password" placeholder="登录密码" onfocus="setInputBorderStyle(this.id)" onblur="resetInputBorderStyle(this.id)"></label>
+    <label for="vertify">验证码 <input type="text" name="vertify" id="vertify" placeholder="验证码字母数字" onfocus="setInputBorderStyle(this.id)" onblur="resetInputBorderStyle(this.id)" onchange="setVertifyUpperCase(this.id)" ></label>
+    <input type="submit" value="登录">
+  </form>
+  <h1>针对 HTML 表单内的动作触发的事件，此处在 form 元素中展示 </h1>
+
+  <script>
+    function setInputBorderStyle(obj) {
+      console.log("1.正在设置" + obj + "对象，border 样式属性")
+      document.getElementById(obj).style.border="1px solid #28548a";
+    }
+    function resetInputBorderStyle(obj) {
+      console.log("2.取消设置" + obj + "对象，border 样式属性")
+      document.getElementById(obj).style.border="";
+    }
+    function setVertifyUpperCase(obj) {
+      console.log("3.取消设置" + obj + "对象，大小写值")
+      var x = document.getElementById(obj).value.toUpperCase() 
+      document.getElementById(obj).value=x
+    }
+    function copyUserName(obj) {
+      console.log("4.你已经选择中账号" + obj );
+      alert("你已经选择中账号:" + document.getElementById(obj).value)
+    }
+    function checkField(value) {
+      console.log("5.输入值已更改值 = " + value);
+      alert("输入值已更改,值为:" + value); //利用一个val变量来存放value值
+    }
+    function checkForm() {
+      console.log("6.正在提交表单数据.");
+      alert("正在提交表单数据.");
+    }
+  </script>
+</body>
+</html>
+<body>

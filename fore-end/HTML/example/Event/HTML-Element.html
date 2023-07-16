@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 元素特殊属性一览</title>
+</head>
+<body>
+  
+<div>
+  <p>示例1.快捷按键</p>
+  <script>
+    function btnAccessKey(obj) {
+      if (obj.accessKeyLabel) {
+        obj.title += ' [' + obj.accessKeyLabel + ']';
+      } else {
+        obj.title += ' [' + obj.accessKey + ']';
+      }
+      var p = document.createElement('p');
+      p.textContent = 'Clicked! => ' + obj.title;
+      obj.parentNode.appendChild(p);
+    };
+  </script>
+  <div>
+    <button accesskey="h" title="Caption" id="btn1" onclick="btnAccessKey(this)">点击我，或者使用ALT+h按键访问我哟!</button>
+
+  </div>
+
+  <p>示例2.元素可编辑的</p>
+
+  <div contentEditable="true">此处文本元素可被编辑</div>
+  <p id="firstParagraph">文字不能被编辑.</p>
+  <p id="secondParagraph" contenteditable="true">Editable Paragraph, 文字可被编辑.</p>
+  <script>
+    const firstParagraph = document.getElementById("firstParagraph");
+    const secondParagraph = document.getElementById("secondParagraph");
+    console.log("firstParagraph ：" + firstParagraph.isContentEditable, "\nsecondParagraph ：" + secondParagraph.isContentEditable )
+  </script>
+
+  <p>示例3.隐藏元素</p>
+  <div id="welcome" class="panel">
+    <h5>Welcome to weiyigeek!</h5>
+    <p hidden>By clicking "OK" you agree to be awesome every day!</p>
+    <button class="button" id="okButton">OK</button>
+  </div>
+
+
+  <p>示例4.元素距离</p>
+  <div id="container">
+    <div id="title">title</div>
+    <div id="descript">descript</div>
+    <div id="body">body</div>
+  </div>
+  <script>
+    var a = document.getElementById("descript").offsetHeight;
+    var b = document.getElementById("descript").offsetWidth;
+    var c = document.getElementById("descript").offsetTop;
+    var d = document.getElementById("descript").offsetLeft;
+    console.log("offsetHeight:" + a, "offsetWidth" + b, "offsetTop" + c,"offsetLeft" + d)
+  </script>
+
+  <p>示例5.元素 Tab 键顺序</p>
+  <input type="number" name="number" id="number" placeholder="tab序号为2">
+  <input type="email" name="email" id="email" class="form-control" value="master@weiyigeek.top" required="required" title="" placeholder="tab序号为1">
+  <script>
+    document.getElementById("number").tabIndex=2;
+    document.getElementById("number").tabIndex=1;
+  </script>
+
+</div>
+
+</body>
+</html>

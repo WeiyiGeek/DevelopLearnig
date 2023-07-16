@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML5 | 拖拽示例演示 </title>
+    <style>
+        #dragElement {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: move;
+        }
+        #dropElement {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragElement" draggable="true">拖动我</div>
+    <div id="dropElement"></div>
+
+    <script>
+        var dragElement = document.getElementById("dragElement");
+        var dropElement = document.getElementById("dropElement");
+
+        dragElement.addEventListener("dragstart", function(event) {
+            event.dataTransfer.setData("text/plain", event.target.id);
+        });
+
+        dropElement.addEventListener("dragover", function(event) {
+            event.preventDefault();
+        });
+
+        dropElement.addEventListener("drop", function(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text/plain");
+            var draggedElement = document.getElementById(data);
+            event.target.appendChild(draggedElement);
+        });
+    </script>
+</body>
+</html>

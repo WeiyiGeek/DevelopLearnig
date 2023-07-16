@@ -1,14 +1,28 @@
 <!DOCTYPE html>            <!--DOCTYPE 声明了文档类型-->
 <html lang="zh">           <!--文本描述-->
 <head>                     <!--头部-->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />      <!--编码及网页类型-->
-  <meta name="author" content="WeiyiGeek" />   <!-- 自定义元数据 -->
-  <title>此处是网站标题</title>   <!--标题-->
+   <!-- 网页编码及类型-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+  <!-- 定义缩放Web页面及针对移动设备优化 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+  <!-- 标题-->
+  <title>此处是网站标题</title>  
   <!-- 网站SEO常用的keywords与description元数据,非常注意关键字与描述长度 -->
   <meta name="keywords" content="WeiyiGeek、唯一极客、IT知识、网络技术、网络安全、安全测试、安全运维、系统运维、Web程序开发、手机/移动开发、IOT物联网开发、数据库学习、系统管理和监控、插件和扩展、开源软件、企业实践、分享学习知识">
   <meta name="description" content="WeiyiGeek-唯一极客博客站点,关注于网络安全运维,Web安全开发,IOT物联网安全开发,应用开发,分享技术学习知识与入坑解决,提升网络安全技术与自身技术能力,立志维护大众网络安全为己任,做一个对国家有用的人,为实现中华民族伟大复兴的中国梦不懈奋斗">
-  <link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" />  <!--设置icon小图标-->
-  <!-- 多种样式元素 -->
+  <!-- 自定义元数据 -->
+  <meta name="author" content="WeiyiGeek" /> 
+  
+  <!-- 设置网站icon小图标-->
+  <link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" /> 
+  
+  <!-- 设置网页图片的相对地址 -->
+  <base href="https://blog.weiyigeek.top/img/" target="_blank">
+
+  <!-- 外部样式，设置当前网页外联样式表css文件 -->
+  <link href="mobile.css" rel="stylesheet" media="all">
+  <link href="mobile.css" type="text/css"  rel="stylesheet"  media="screen and (max-width: 600px)">
+  <!-- 内部样式，直接将css写入到style标签中 -->
   <style type="text/css">
     body {background-color:chocolate}
     p {color:bisque ; background-color:darkseagreen;padding: 5px; border: 1px solid black;}
@@ -36,6 +50,10 @@
       background-color: black;
     }
   </style>
+
+  <!-- 外部js，引用外部js  -->
+  <script src="/demo/test.js"></script>
+  <!-- 内部js，直接将js写入到script标签内部 -->
   <script type="text/javascript">
     confirm("你好,Hello World!");
   </script>

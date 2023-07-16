@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media 媒体事件案例实践</title>
+</head>
+<body>
+  <h1>多媒体事件（Media Events），通过视频（videos），图像（images）或者音频（audio） 触发该事件，多应用于 HTML 媒体元素比如 audio, embed, img, object, 和 video 等。</h1>
+  <div name="video"> 
+    <video src="./微信公众号与小程序联合传播样式-动画.mp4" poster="./logo.png" width="720x" height="480px" controls muted autopictureinpicture playsinline onplay="alert('视频开始播放.')" onpause="alert('视频已停止播放.')" ondurationchange="alert('视频播放画面已改变')" onratechange="console.log(this.playbackRate + ' 播放速率发生改变!');">
+      抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以 <a href="videofile.ogg">下载</a>
+      并用你喜欢的播放器观看！
+    </video>
+  </div>
+</body>
+</html>

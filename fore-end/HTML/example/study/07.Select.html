@@ -1,0 +1,107 @@
+<!DOCTYPE html>            <!--DOCTYPE 声明了文档类型-->
+<html>   <!--文本描述-->
+<head>     <!--头部-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />     <!--编码及网页类型-->
+<title>Title</title>   <!--标题-->
+<link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" />  <!--设置icon小图标-->
+</head>
+<body>  <!--主体-->
+<p>1.简单的下拉列表</p>
+<form action="https://weiyigeek.top/cars.php" method="get">
+  <select name="cars">
+    <option value="领克">领克</option>
+    <option value="吉利">吉利</option>
+    <option value="长安">长安</option>
+  </select>
+</form>
+<br /><br /><br /><br />
+<p>2.下面是设置显示多个选项和必须填写，多选,并且用form来绑定提交的form表单</p>
+<select name="carlist" form="idform1" size="4" required multiple>
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+   <option value="opel">Opel</option>
+   <option value="audi">Audi</option>
+</select>
+<br />
+<p>3.下面是设置disabled,不启用</p>
+<select name="carlist" form="idform1" size="4" disabled>
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+   <option value="opel">Opel</option>
+   <option value="audi">Audi</option>
+</select>
+<hr />
+<p>4.设置默认选择的,而且第二项无法选择</p>
+<form>
+<select name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab" disabled>Saab</option>
+  <option value="fiat" selected="selected">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+</form><br><br><br><br><br><br><br>
+<hr>
+<h3>5.optgroup 标签使用实践</h3>
+<form class="cars" action="index.html" method="post">
+  <select form="weiyigeek" name="cars">
+    <optgroup label="国产">
+        <option value="长安">长安</option>
+        <option value="吉利">吉利</option>
+    </optgroup>
+    <optgroup label="合资">
+        <option value="大众">大众</option>
+        <option value="丰田">丰田</option>
+    </optgroup>
+  </select>
+</form>
+
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<hr />
+<h4>6.label标签的for属性绑定input表单</h4>
+ <form action="index.html" method="post">
+   <label for="male" form="idform1">Male</label>
+   <input type="radio" name="sex" value="male" id="male"><br />
+   <label for="female">Female</label>
+   <input type="radio" name="sex" value="female" id="female"><br/>
+   <input type="submit" value="submit">
+ </form>
+
+<hr />
+<P>fieldset 与 legend 元素示例：</P>
+<style>
+  legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+  }
+  input {
+    margin: 0.4rem;
+  }
+</style>
+
+<form class="" action="index.html" method="post">
+  <fieldset>
+    <legend>Personal information</legend>
+    Name:<input type="text" name="name" size="30"><br>
+    E-mail:<input type="text" name="email" size="30"><br>
+    Date of birth:<input type="text" size="10"><br>
+    <input type="submit" value="submit">
+  </fieldset>
+</form>
+
+<form class="info" action="index.html" method="post">
+  <fieldset disabled>
+    <legend>Please Input Personal Info (禁用)</legend>
+    Name: <input type="text"><br>
+    Email: <input type="text"><br>
+    Date of birth: <input type="text"><br>
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+  </form>
+
+
+<hr/>
+</body>
+</html>

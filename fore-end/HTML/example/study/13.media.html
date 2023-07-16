@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 中媒体标签元素实践</title>
+</head>
+<body>
+  <fieldset>
+    <legend>1.音频 audio 标签示例</legend>
+    <audio controls>
+      <source src="myAudio.mp3" type="audio/mpeg">
+      <source src="foo.ogg" type="audio/ogg; codecs=vorbis"/>
+      <source src="myAudio.ogg" type="audio/ogg">
+      <p>Your browser doesn't support HTML5 audio. Here is
+        a <a href="myAudio.mp4">link to the audio</a> instead.</p>
+    </audio>
+  </fieldset>
+
+
+  <fieldset>
+    <legend>2.视频 video 标签示例</legend>
+    <video controls width="250">
+      <source src="/media/cc0-videos/flower.webm" type="video/webm">
+      <source src="/media/cc0-videos/flower.mp4" type="video/mp4">
+      Sorry, your browser does not support embedded videos, Download the
+      <a href="/media/cc0-videos/flower.webm">WEBM</a>
+      or
+      <a href="/media/cc0-videos/flower.mp4">MP4</a>
+      video.
+    </video>
+  </fieldset>
+
+  <fieldset>
+    <legend>3.字母 track 标签示例</legend>
+    <video controls src="/media/cc0-videos/friday.mp4">
+        <track default
+              kind="captions"
+              srclang="en"
+              src="/media/examples/friday.vtt">
+        Download the
+        <a href="/media/cc0-videos/friday.mp4">MP4</a>
+        video, and
+        <a href="/media/examples/friday.vtt">subtitles</a>.
+    </video>
+  </fieldset>
+
+
+  <fieldset>
+    <legend>4.object 标签示例</legend>
+    <!-- 1.通过这种方式，我们能够嵌套多个 object 元素（每个对应一个浏览器）。 -->
+    <object 属性="属性值"> Sorry,you browser not support object Tag</object>
+
+    <!-- 2.嵌入pdf文档 -->
+    <object type="application/pdf"
+        data="/media/examples/In-CC0.pdf"
+        width="250"
+        height="200">
+    </object>
+
+    <!-- 3.Embed a flash movie（当前不建议使用flash） -->
+    <object data="move.swf" type="application/x-shockwave-flash"></object>
+
+    <!-- 4.Embed a flash movie with parameters（当前不建议使用flash） -->
+    <object data="move.swf" type="application/x-shockwave-flash">
+      <param name="foo" value="bar">
+    </object>
+  </fieldset>  
+
+
+</body>
+</html>

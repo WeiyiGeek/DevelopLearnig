@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML图形图像标签元素介绍</title>
+</head>
+<body>
+  <fieldset>
+    <legend>img 、map、area标签示例</legend>
+    <img src="https://blog.weiyigeek.top/img/avatar.jpg" alt="MDN logo" srcset="favicon144.png 2x" />
+    <br>
+    <img
+    src="https://blog.weiyigeek.top/img/wechat-gzh.jpg"
+    alt="Clock"
+    srcset="wechat-gzh.jpg-200px.png 200w, wechat-gzh.jpg-400px.png 400w"
+    sizes="(max-width: 100px) 100px, 50vw" />
+    <br>
+    <p><b>注释：</b>img 元素中的 "usemap" 属性引用 map 元素中的 "id" 或 "name" 属性（根据浏览器）,所以我们同时向 map 元素添加了 "id" 和 "name" 属性。</p>
+
+    <img src="http://www.w3school.com.cn/i/eg_planets.jpg"  usemap="#planetmap" alt="Planets" />
+    <map name="planetmap" id="planetmap">
+    <!--下面这个是区域，后面将标签会讲到-->
+    <area
+    shape="rect"
+    coords="0,0,100,260"
+    href ="http://www.w3school.com.cn/example/html/sun.html"
+    target ="_blank"
+    alt="Sun-太阳" />
+
+    <area    
+    shape="circle"
+    coords="133,161,140,180"
+    href ="http://www.w3school.com.cn//example/html/venus.html"
+    target ="_blank"
+    alt="Venus-金星" />
+
+    <area
+    shape="circle"
+    coords="150,130,161,170"
+    href ="http://www.w3school.com.cn/example/html/mercur.html"
+    target ="_blank"
+    alt="Mercury-水星" />
+    </map>
+
+    <p>请把鼠标移动到图像上，看一下状态栏的坐标如何变化。</p>
+    <a href="https://blog.weiyigeek.top">
+      <img src="https://blog.weiyigeek.top/img/avatar.jpg" ismap />
+    </a>
+  </fieldset>
+
+  <fieldset>
+    <legend>figure、figcaption标签示例</legend>
+<style>
+  figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 720px;
+    /* margin: auto; */
+  }
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    /* text-align: center; */
+  }
+  </style>
+  <figure>
+    <img src="https://blog.weiyigeek.top/img/avatar.jpg" alt="Elephant at sunset">
+    <figcaption>The beautiful WEIYIGEEK logo.</figcaption>
+  </figure>   
+
+<!-- 代码段 -->
+<figure>
+  <figcaption>使用 <code>navigator</code> 获取浏览器的信息。</figcaption>
+  <pre>
+  function NavigatorExample() {
+    var txt;
+    txt = "Browser CodeName: " + navigator.appCodeName + "; ";
+    txt+= "Browser Name: " + navigator.appName + "; ";
+    txt+= "Browser Version: " + navigator.appVersion  + "; ";
+    txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
+    txt+= "Platform: " + navigator.platform  + "; ";
+    txt+= "User-agent header: " + navigator.userAgent  + "; ";
+    console.log("NavigatorExample", txt);
+  }
+    </pre>
+  </figure>
+
+  <!-- 引用 -->
+  <figure>
+    <figcaption><b>WeiyiGeek 个人激励</b></figcaption>
+    <blockquote>
+      为者常成，行者常至。
+      https://blog.weiyigeek.top
+    </blockquote>
+  </figure>
+  <!-- 诗歌 -->
+  <figure style="max-width: 960;">
+    <figcaption><b><cite>晏子春秋·内篇杂下</cite></b></figcaption>
+    <p style="white-space:pre">
+      梁丘据谓晏子曰：“吾至死不及夫子矣！”晏子曰：“婴闻之，为者常成，行者常至。婴非有异于人也。常为而不置，常行而不休者，故难及也？”
+    </p>
+    <p style="white-space:pre">
+      无论做什么事情，只要持之以恒，就有可能成功；但不努力，则一定不会成功！
+    </p>
+  </figure>
+  </fieldset>
+
+
+  <fieldset>
+    <legend>svg 标签使用示例</legend>
+    <p>使用svg画一个五星红旗</p>
+    <svg width="480" height="320" viewBox='0 0 960 640' transform="scale(1)" >
+      <!-- 旗帜 -->
+      <rect x='0' y='0' width='960' height='640' fill='red'/>
+      <!-- 大五角星 -->
+      <path d="M160,79
+      L112.3894,225.5304
+      L237.0356,134.9696
+      L82.9644,134.9696
+      L207.6106,225.5304
+      Z" fill='yellow'/>
+    
+      <!-- 小五角星从上到下 -->
+      <path d="M292.5602,80.4639
+      L351.8765,66.8091
+      L295.8626,42.9908
+      L327.1787,95.1844
+      L332.522,34.5518
+      Z" fill='yellow'/>
+    
+      <path d="M352.3216,132.5255
+      L406.9683,105.7187
+      L378.5148,159.5264
+      L369.9069,99.2705
+      L412.2884,142.9589
+      Z" fill='yellow'/>
+    
+      <path d="M353.2312,215.2089
+      L403.7252,249.1976
+      L382.8547,192.0206
+      L366.1311,250.5462
+      L414.0597,213.0267
+      Z" fill='yellow'/>
+    
+      <path d="M295.0122,268.0098
+      L351.9655,289.485
+      L293.2665,305.5875
+      L331.2902,258.0579
+      L328.4656,318.8599
+      Z" fill='yellow'/>
+    </svg>
+
+    <p>使用svg画一个五角星</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+      <polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:red;stroke:blue;stroke-width:3;fill-rule:evenodd;"/>
+    </svg>
+  </fieldset>
+
+  <fieldset>
+    <legend>canvas 标签使用示例</legend>
+    <p>使用canvas生成时钟示例</p>
+    <canvas id="canvas" width="600" height="600">
+      抱歉，您的浏览器不支持 canvas 元素
+     （这些内容将会在不支持<canvas>元素的浏览器或是禁用了 JavaScript 的浏览器内渲染并展现）
+    </canvas>
+  </fieldset>  
+<script>
+const c = document.querySelector("#canvas")
+const ctx = c.getContext('2d')
+setInterval(_ => {
+  ctx.save() // 保存初始状态
+  ctx.clearRect(0,0,600,600) //清空矩阵中的内容
+  ctx.translate(150, 150) // 设置中心，此时150，150变成了坐标的0,0
+  ctx.save() // 把状态保存起来
+
+  ctx.beginPath() // 画大圆
+  ctx.arc(0, 0, 100, 0, 2 * Math.PI) // 画圆线使用arc（中心x，中心y，半径，其实角度，结束角度）
+  ctx.stroke() // 执行画线段的操作stroke
+  ctx.closePath()
+
+  ctx.beginPath() // 画小圆
+  ctx.arc(0, 0, 5, 0, 2 * Math.PI)
+  ctx.stroke() // 执行画线段的操作stroke
+  ctx.closePath()
+
+  // 获取当前时分秒
+  let time = new Date()
+  let hour = time.getHours() % 12
+  let min = time.getMinutes()
+  let sec = time.getSeconds()
+
+  // 绘制时针
+  ctx.rotate(2 * Math.PI / 12 * hour + 2 * Math.PI / 12 * (min / 60) - Math.PI / 2) // 时针角度
+  ctx.beginPath()
+  ctx.moveTo(-10, 0) // 线条起点
+  ctx.lineTo(40, 0) // 线条终点
+  ctx.lineWidth = 3
+  ctx.stroke()
+  ctx.closePath()
+  ctx.restore() //恢复上一次sava的状态
+  ctx.save() //恢复完再保存一次
+
+  // 分针
+  ctx.rotate(2 * Math.PI / 60 * min - 2 * Math.PI / 2)
+  ctx.beginPath()
+  ctx.moveTo(-10, 0)
+  ctx.lineTo(60, 0)
+  ctx.lineWidth = 2
+  ctx.strokeStyle = '#999'
+  ctx.stroke()
+  ctx.closePath()
+  ctx.restore()
+  ctx.save()
+
+  // 分针
+  ctx.rotate(2 * Math.PI / 60 * sec - 2 * Math.PI / 2)
+  ctx.beginPath()
+  ctx.moveTo(-10, 0)
+  ctx.lineTo(80, 0)
+  ctx.lineWidth = 1
+  ctx.strokeStyle = '#dc0000'
+  ctx.stroke()
+  ctx.closePath()
+  ctx.restore()
+  ctx.save()
+
+  // 绘制刻度
+  ctx.lineWidth = 1
+  for (let i = 0; i < 60; i++) {
+    ctx.rotate(2 * Math.PI / 60)
+    ctx.beginPath()
+    ctx.moveTo(90, 0)
+    ctx.lineTo(100, 0)
+    ctx.stroke()
+    ctx.closePath()
+  }
+  ctx.restore()
+  ctx.save()
+  ctx.lineWidth = 2
+  for (let i = 0; i < 12; i++) {
+    ctx.rotate(2 * Math.PI / 12)
+    ctx.beginPath()
+    ctx.moveTo(86, 0)
+    ctx.lineTo(100, 0)
+    ctx.stroke()
+    ctx.closePath()
+  }
+  ctx.restore()
+  ctx.save()
+
+  // 添加文字
+  let num=['6','5','4','3','2','1','12','11','10','9','8','7'];
+  // 设置字体即颜色
+  ctx.font = "10px 微软雅黑 bolder"
+  // 设置字体
+  ctx.fillStyle = "#955f17"
+  ctx.beginPath();
+  ctx.lineWidth=2;
+  for(let i=0;i<12;i++){
+    ctx.strokeText(num[i],130*Math.sin(Math.PI/6*i),130*Math.cos(Math.PI/6*i));
+  }
+  ctx.restore()
+  ctx.restore() // 恢复初始状态
+}, 1000)
+</script>
+</body>
+</html>
